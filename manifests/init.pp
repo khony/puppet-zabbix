@@ -27,6 +27,14 @@ class zabbix (
   #  content => template($template),
   #}
 
+  #SCRIPTS CONF - STATIC
+  file { '/etc/zabbix/zabbix_agent.d/Informatech.conf':
+    source => "puppet:///modules/zabbix/Informatech.conf",
+    owner => "root",
+    group => "root",
+    mode  => 755,
+  }
+
   #SCRIPTS
   if $architecture == 'i686' or $architecture == 'i386' {
    file { "/etc/zabbix/scripts":
