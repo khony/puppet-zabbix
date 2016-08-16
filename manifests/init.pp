@@ -12,7 +12,7 @@ class zabbix (
        ensure => "directory"
   }
 
-  file { "/etc/zabbix/zabbix_agent.d" :
+  file { "/etc/zabbix/zabbix_agentd.d" :
        path => "/etc/zabbix/zabbix_agentd.d",
        ensure => "directory",
        owner => "root",
@@ -21,18 +21,10 @@ class zabbix (
   }
 
   #SCRIPTS CONF
-  #file { '/etc/zabbix/zabbix_agent.d/Informatech.conf':
-  #  ensure  => file,
-  #  backup  => false,
-  #  content => template($template),
-  #}
-
-  #SCRIPTS CONF - STATIC
-  file { '/etc/zabbix/zabbix_agent.d/Informatech.conf':
-    source => "puppet:///modules/zabbix/Informatech.conf",
-    owner => "root",
-    group => "root",
-    mode  => 755,
+  file { '/etc/zabbix/zabbix_agentd.d/Informatech.conf':
+    ensure  => file,
+    backup  => false,
+    content => template($template),
   }
 
   #SCRIPTS
