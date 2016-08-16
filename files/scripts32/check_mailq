@@ -1,0 +1,9 @@
+#!/bin/bash
+
+QueueResult=`/usr/bin/mailq | tail -n 1`
+
+if [ "$QueueResult" == "Mail queue is empty" ]; then
+        echo 0
+else
+        echo `echo $QueueResult |awk {'print $5'}`
+fi

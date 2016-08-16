@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SERVER=`smbclient -N -L $1 2>&1 | grep Server`
+
+if [ $? -eq 0 ] ; then
+
+        #echo OK $SERVER
+        echo 0
+	exit 0
+
+fi
+
+#echo CRITICAL SMB not available on $1
+echo 2
+exit 2

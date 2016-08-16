@@ -1,0 +1,7 @@
+#!/bin/bash
+
+A=`echo | openssl s_client -connect $1 2>/dev/null | openssl x509 -noout -dates | tail -1 | tr -s " " |cut -d "=" -f2 | cut -d " " -f1,2,4`
+B=`date -d "$A" +%Y-%m-%d`
+C=`date +%Y-%m-%d`
+
+echo "scale=0;("`date -d "$B" +%s`-`date -d "$C" +%s`")"/24/60/60|bc
