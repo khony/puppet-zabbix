@@ -21,11 +21,11 @@ class zabbix (
   }
 
   #SCRIPTS CONF
-  file { '/etc/zabbix/zabbix.agent.d/Informatech.conf':
-    ensure  => file,
-    backup  => false,
-    content => template($template),
-  }
+  #file { '/etc/zabbix/zabbix_agent.d/Informatech.conf':
+  #  ensure  => file,
+  #  backup  => false,
+  #  content => template($template),
+  #}
 
   #SCRIPTS
   if $architecture == 'i686' or $architecture == 'i386' {
