@@ -2,4 +2,10 @@ puppet-zabbix
 ===========
 zabbix util scripts
 
-by Fábio Miguel Mello @ Informatech
+integrate with foreman
+=====
+
+cd /etc/puppet/environments/production/modules
+git clone git@github.com:khony/puppet-zabbix.git
+
+Now, just go to web interface and import
