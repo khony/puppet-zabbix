@@ -11,7 +11,6 @@ class zabbix (
        path => "/etc/zabbix",
        ensure => "directory"
   }
-
   file { "/etc/zabbix/zabbix_agentd.d" :
        path => "/etc/zabbix/zabbix_agentd.d",
        ensure => "directory",

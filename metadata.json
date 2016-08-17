@@ -1,25 +1,11 @@
 {
-  "name": "kreczko-motd",
-  "author": "kreczko",
-  "description": "This module simply manages /etc/motd as a template, showing interpolation of system attributes",
+  "name": "zabbix-scripts",
+  "author": "fabiomellobr",
+  "description": "Module to manage Zabbix, include scripts",
   "license": "Apache License, Version 2.0",
-  "project_page": "https://github.com/HEP-Puppet/motd",
-  "source": "git@github.com:HEP-Puppet/motd.git",
-  "summary": "A simple module to demonstrate managing /etc/motd as a template",
-  "version": "0.1.4",
-  "checksums": {
-    ".gemfile": "f2a73f3c76933e38e004d3c2a939c56c",
-    ".travis.yml": "ece9944c5aad10729442838e2e571f9e",
-    "Modulefile": "0b39aa26912178f5669d2345c3a48d33",
-    "README.md": "46989f8cca8a3be79c1a206e395b34a4",
-    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
-    "manifests/file.pp": "90d12c2d132677601387aa0bd1ab9381",
-    "manifests/init.pp": "a7580bc977082a9db3644613422745dc",
-    "manifests/params.pp": "ec63ebf86e33612e71126eb5b3839ba1",
-    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
-    "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
-    "templates/motd_default.erb": "7b61e26a236a442dcc3e564f8bb0bf37",
-    "tests/init.pp": "5086992bfbe4109aef08a6dc91736250"
-  },
+  "project_page": "https://github.com/khony/puppet-zabbix",
+  "source": "git@github.com:khony/puppet-zabbix.git",
+  "summary": "A simple module to manage Zabbix",
+  "version": "0.0.1",
   "dependencies": []
 }
