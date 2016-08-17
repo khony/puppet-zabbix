@@ -20,3 +20,9 @@ git clone git@github.com:khony/puppet-zabbix.git
 ```
 
 Now, just go to web interface and import
+
+contributors
+=====
+
+* Fábio Miguel Mello (me)
+* Bruno Guilherme Souza (https://github.com/brunogui0812) - Puppet Manifests
