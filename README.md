@@ -1,9 +1,11 @@
 puppet-zabbix
-===========
+=====
 zabbix util scripts
 
 modules
 =====
+* check bacula backups with auto discovery jobs (mysql/postgresql)
+* check smart status
 * check certificate (ssl) expire date
 * check dhcp
 * check file age (like to a mysql dump)
