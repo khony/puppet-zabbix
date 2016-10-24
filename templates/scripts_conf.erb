@@ -9,7 +9,7 @@ UserParameter=RBL3.check[*],/usr/bin/sudo /etc/zabbix/scripts/check_rbl --extra-
 UserParameter=PUPPET.check[*],/usr/bin/sudo /etc/zabbix/scripts/check_puppetagent -w $1 -c $1
 UserParameter=CERTIFICATE.check[*],/usr/bin/sudo /etc/zabbix/scripts/certificate $1
 UserParameter=BACULA.discovery,/usr/bin/sudo /etc/zabbix/scripts/bacula_discovery
-UserParameter=BACULA.check[*],/usr/bin/sudo /etc/zabbix/scripts/bacula_check_job $1 $2 $3 $4
+UserParameter=BACULA.check[*],/usr/bin/sudo /etc/zabbix/scripts/bacula_check_job "$1" "$2" "$3" "$4"
 
 # Squid
 UserParameter=squid.http_requests,squidclient -h 127.0.0.1 mgr:info|grep 'Number of HTTP requests received:'|cut -d':' -f2| tr -d ' \t'
