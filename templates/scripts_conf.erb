@@ -10,6 +10,9 @@ UserParameter=PUPPET.check[*],/usr/bin/sudo /etc/zabbix/scripts/check_puppetagen
 UserParameter=CERTIFICATE.check[*],/usr/bin/sudo /etc/zabbix/scripts/certificate $1
 UserParameter=BACULA.discovery,/usr/bin/sudo /etc/zabbix/scripts/bacula_discovery
 UserParameter=BACULA.check[*],/usr/bin/sudo /etc/zabbix/scripts/bacula_check_job $1 $2 $3 $4
+UserParameter=RBACKUP.discovery[*],/usr/bin/sudo /usr/bin/rbackup -z
+UserParameter=RBACKUP.check[*],/usr/bin/sudo /usr/bin/rbackup -s $1
+UserParameter=RBACKUP.lastrun[*],/usr/bin/sudo /usr/bin/rbackup -c $1
 
 # Squid
 UserParameter=squid.http_requests,squidclient -h 127.0.0.1 mgr:info|grep 'Number of HTTP requests received:'|cut -d':' -f2| tr -d ' \t'
