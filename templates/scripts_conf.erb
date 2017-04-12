@@ -3,9 +3,7 @@ UserParameter=BKPLDAP.check,/usr/bin/sudo /etc/zabbix/scripts/check_file_age -w 
 UserParameter=DHCP.check,/usr/bin/sudo /etc/zabbix/scripts/check_dhcp -u -i eth0
 UserParameter=SAMBA.check,/usr/bin/sudo /etc/zabbix/scripts/check_smb 127.0.0.1
 UserParameter=MAILQ.check,/usr/bin/sudo /etc/zabbix/scripts/check_mailq
-UserParameter=RBL.check[*],/usr/bin/sudo /etc/zabbix/scripts/check_rbl --extra-opts=rbl@/etc/zabbix/scripts/check_rbl.ini -t 13 -H $1
-UserParameter=RBL2.check[*],/usr/bin/sudo /etc/zabbix/scripts/check_rbl --extra-opts=rbl@/etc/zabbix/scripts/check_rbl.ini -t 13 -H $1
-UserParameter=RBL3.check[*],/usr/bin/sudo /etc/zabbix/scripts/check_rbl --extra-opts=rbl@/etc/zabbix/scripts/check_rbl.ini -t 13 -H $1
+UserParameter=RBL.check[*],/usr/bin/sudo /etc/zabbix/scripts/check_rbl -i $1
 UserParameter=PUPPET.check[*],/usr/bin/sudo /etc/zabbix/scripts/check_puppetagent -w $1 -c $1
 UserParameter=CERTIFICATE.check[*],/usr/bin/sudo /etc/zabbix/scripts/certificate $1
 UserParameter=BACULA.discovery,/usr/bin/sudo /etc/zabbix/scripts/bacula_discovery
