@@ -11,6 +11,10 @@ UserParameter=BACULA.check[*],/usr/bin/sudo /etc/zabbix/scripts/bacula_check_job
 UserParameter=RBACKUP.discovery[*],/usr/bin/sudo /usr/bin/rbackup -z
 UserParameter=RBACKUP.check[*],/usr/bin/sudo /usr/bin/rbackup -s $1
 UserParameter=RBACKUP.lastrun[*],/usr/bin/sudo /usr/bin/rbackup -c $1
+UserParameter=md.discover,ls /sys/class/block | awk 'BEGIN{printf "{\"data\":["}; /md/ {printf c"{\"{#MDNAME}\":\""$1"\"}";c=","}; END{print "]}"}'
+UserParameter=md.degraded[*],cat /sys/block/$1/md/degraded
+UserParameter=md.sync_action[*],cat /sys/block/$1/md/sync_action
+UserParameter=md.raid_disks[*],cat /sys/block/$1/md/raid_disks
 
 # Squid
 UserParameter=squid.http_requests,squidclient -h 127.0.0.1 mgr:info|grep 'Number of HTTP requests received:'|cut -d':' -f2| tr -d ' \t'
